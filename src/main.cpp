@@ -86,7 +86,7 @@ void setup()
 
     HttpsOTA.onHttpEvent(HttpEvent);
     Serial.println("Starting OTA");
-    HttpsOTA.begin(url, server_certificate, false); //we need false so the code can works
+    HttpsOTA.begin(url, server_certificate, false); //by default it will skip the certificate. Use false if you want to check it
 
     Serial.println("Please Wait it takes some time ...");
 }
